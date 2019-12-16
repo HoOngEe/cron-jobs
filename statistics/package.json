@@ -1,0 +1,30 @@
+{
+    "name": "rle-statistics",
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "license": "ISC",
+    "scripts": {
+        "build": "tsc --incremental -p .",
+        "leader-frequency": "RPC_URL=http://localhost:8080 SERVER=akita ts-node ./src/leaderFrequency.ts",
+        "fmt": "eslint --ext .ts ./src --fix && prettier 'src/**/*.{ts, json}' --write",
+        "lint": "eslint --ext .ts ./src && prettier 'src/**/*.{ts, json}' --list-different"
+    },
+    "dependencies": {
+        "@types/bn.js": "^4.11.5",
+        "codechain-sdk": "^1.2.0",
+        "codechain-stakeholder-sdk": "^2.0.0",
+        "request-promise-native": "^1.0.7",
+        "rlp": "^2.2.3"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.123",
+        "@types/request": "^2.48.1",
+        "@types/request-promise-native": "^1.0.15",
+        "@typescript-eslint/eslint-plugin": "^1.5.0",
+        "@typescript-eslint/parser": "^1.5.0",
+        "eslint": "^5.16.0",
+        "prettier": "^1.18.2",
+        "ts-node": "^8.3.0",
+        "typescript": "^3.5.2"
+    }
+}
