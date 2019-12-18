@@ -6,6 +6,7 @@
     "scripts": {
         "build": "tsc --incremental -p .",
         "leader-frequency": "RPC_URL=http://localhost:8080 SERVER=akita ts-node ./src/leaderFrequency.ts",
+        "block-generation-time": "RPC_URL=http://localhost:8080 SERVER=akita ts-node ./src/blockGenerationTime.ts",
         "fmt": "eslint --ext .ts ./src --fix && prettier 'src/**/*.{ts, json}' --write",
         "lint": "eslint --ext .ts ./src && prettier 'src/**/*.{ts, json}' --list-different"
     },
