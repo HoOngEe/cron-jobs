@@ -1,6 +1,7 @@
 import { SDK } from "codechain-sdk";
 import { getTermMetadata, getPossibleAuthors } from "codechain-stakeholder-sdk";
 import { U64 } from "codechain-sdk/lib/core/classes";
+const RLP = require("rlp");
 
 export const SERVER: string = (() => {
     const server = process.env.SERVER;
@@ -18,6 +19,21 @@ export const BLOCK_VIEW_IDX = 1;
 export function decodeViewField(encodedView: number[]): U64 {
     const buffer = Buffer.from(encodedView);
     return U64.fromBytes(buffer);
+}
+
+function readUIntRLP(bytes: Buffer) {
+    if (bytes.length === 0) {
+        return 0;
+    } else {
+        return bytes.readUIntBE(0, bytes.length);
+    }
+}
+
+
+export function decodeSeedSigner(encodedSeed: any): number {
+    const buffer = Buffer.from(encodedSeed);
+    const decoded = RLP.decode(buffer);
+    return readUIntRLP(decoded[0]);
 }
 
 export function networkId(server: string): string {

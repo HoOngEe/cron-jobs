@@ -46,14 +46,14 @@
   integrity sha512-ijGqzZt/b7BfzcK9vTrS6MFljQRPn5BFWOx8oE0GYxribu6uV+aA9zZuXI1zc/etK9E8nrgdoF2+LgUw7+9tJQ==
 
 "@types/node@*":
-  version "12.12.17"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.17.tgz#191b71e7f4c325ee0fb23bc4a996477d92b8c39b"
-  integrity sha512-Is+l3mcHvs47sKy+afn2O1rV4ldZFU7W8101cNlOd+MRbjM4Onida8jSZnJdTe/0Pcf25g9BNIUsuugmE6puHA==
+  version "12.12.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.21.tgz#aa44a6363291c7037111c47e4661ad210aded23f"
+  integrity sha512-8sRGhbpU+ck1n0PGAUgVrWrWdjSW2aqNeyC15W88GRsMpSwzv6RJGlLhE7s2RhVSOdyDmxbqlWSeThq4/7xqlA==
 
 "@types/node@^10.3.5":
-  version "10.17.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.9.tgz#4f251a1ed77ac7ef09d456247d67fc8173f6b9da"
-  integrity sha512-+6VygF9LbG7Gaqeog2G7u1+RUcmo0q1rI+2ZxdIg2fAUngk5Vz9fOCHXdloNUOHEPd1EuuOpL5O0CdgN9Fx5UQ==
+  version "10.17.11"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.11.tgz#46ba035fb917b31c948280dbea22ab8838f386a4"
+  integrity sha512-dNd2pp8qTzzNLAs3O8nH3iU9DG9866KHq9L3ISPB7DOGERZN81nW/5/g/KzMJpCU8jrbCiMRBzV9/sCEdRosig==
 
 "@types/request-promise-native@^1.0.15":
   version "1.0.17"
@@ -63,9 +63,9 @@
     "@types/request" "*"
 
 "@types/request@*", "@types/request@^2.48.1":
-  version "2.48.3"
-  resolved "https://registry.yarnpkg.com/@types/request/-/request-2.48.3.tgz#970b8ed2317568c390361d29c555a95e74bd6135"
-  integrity sha512-3Wo2jNYwqgXcIz/rrq18AdOZUQB8cQ34CXZo+LUwPJNpvRAL86+Kc2wwI8mqpz9Cr1V+enIox5v+WZhy/p3h8w==
+  version "2.48.4"
+  resolved "https://registry.yarnpkg.com/@types/request/-/request-2.48.4.tgz#df3d43d7b9ed3550feaa1286c6eabf0738e6cf7e"
+  integrity sha512-W1t1MTKYR8PxICH+A4HgEIPuAC3sbljoEVfyZbeFJJDbr30guDspJri2XOaM2E+Un7ZjrihaDi7cf6fPa2tbgw==
   dependencies:
     "@types/caseless" "*"
     "@types/node" "*"
@@ -390,25 +390,24 @@ codechain-primitives@^1.0.0:
     node-forge "^0.7.6"
     rlp "^2.1.0"
 
-codechain-sdk@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/codechain-sdk/-/codechain-sdk-1.2.1.tgz#3976619f05af942cb5a2d511ff796fc26316cc2d"
-  integrity sha512-WeJb7QbMAGolPnh08+/5kz0FZ3p91/57P1u+f0j2iY07wI33+ta590KfQW1rSLkcJIVtaygKwGqkj+1CfGNOjQ==
+codechain-sdk@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/codechain-sdk/-/codechain-sdk-2.0.1.tgz#c557d95be870d7b0f97617dbfabccabe67e297d1"
+  integrity sha512-pT2GJYvHd5ZwK6r9iWamtGXt18EBx/V8W7SxoOpD9Irg4y3g3Y7RzhEPTbjdju4ezBDARXcobwGC35qLbuYeXA==
   dependencies:
     buffer "5.1.0"
     codechain-keystore "^0.6.0"
     codechain-primitives "^1.0.0"
     jayson "^2.0.6"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     node-fetch "^2.1.2"
     request "^2.88.0"
     request-promise "^4.2.2"
     rlp "^2.0.0"
 
-codechain-stakeholder-sdk@^2.0.0:
+"codechain-stakeholder-sdk@https://github.com/HoOngEe/codechain-stakeholder-sdk-js#fix/validator-type":
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/codechain-stakeholder-sdk/-/codechain-stakeholder-sdk-2.0.0.tgz#e78660cf457fd81b365c86d35b8b5a8a7d4fdd7c"
-  integrity sha512-aNtI0MR76dkQGmBm0WhxY/MVRwGdmUs3tP/sGs0LE5Bk39lGu4y+mD09sIC+E8Lvqc+2dZEKQHq2YmN8BvaeDw==
+  resolved "https://github.com/HoOngEe/codechain-stakeholder-sdk-js#83375f34faf933259b95f2303d3f9773c5cfcddf"
   dependencies:
     rlp "^2.2.2"
 

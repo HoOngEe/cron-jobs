@@ -1,18 +1,27 @@
-import { sdk, networkId, SERVER, findFullDynamic } from "./config";
+import { sdk, networkId, SERVER, findFullDynamic, decodeSeedSigner } from "./config";
 import { PlatformAddress } from "codechain-sdk/lib/core/classes";
 import { AuthorRecorder } from "./authorRecorder";
-import { getValidators } from "codechain-stakeholder-sdk";
+import { getValidators } from "codechain-stakeholder-sdk/lib/index";
+
+interface AuthorInfo {
+    blockAuthor: string;
+    seedAuthor: string;
+}
 
 const getAuthorOfBlockNum = async (
     blockNumber: number
-): Promise<PlatformAddress> => {
+): Promise<AuthorInfo> => {
     const block = await sdk.rpc.chain.getBlock(blockNumber);
     if (block === null) {
         throw Error(
             `The block for the corresponding block numer ${blockNumber} does not exist`
         );
     }
-    return block.author;
+    const seedSigner = decodeSeedSigner(block.seal[4]);
+    return {
+        blockAuthor: block.author.toString(),
+        seedAuthor: seedSigner.toString()
+    }
 };
 
 async function main() {
@@ -21,7 +30,7 @@ async function main() {
     const recordFrom = await findFullDynamic(recordUntil);
     for (let i = recordFrom; i <= recordUntil; i++) {
         const author = await getAuthorOfBlockNum(i);
-        recorder.recordAuthor(author.toString());
+        recorder.recordAuthor(author.blockAuthor);
     }
 
     const validators = await getValidators(sdk);

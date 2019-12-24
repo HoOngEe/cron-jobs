@@ -5,15 +5,15 @@
     "license": "ISC",
     "scripts": {
         "build": "tsc --incremental -p .",
-        "leader-frequency": "RPC_URL=http://localhost:8080 SERVER=akita ts-node ./src/leaderFrequency.ts",
+        "leader-frequency": "RPC_URL=http://192.168.1.101:8080 SERVER=akita ts-node ./src/leaderFrequency.ts",
         "block-generation-time": "RPC_URL=http://localhost:8080 SERVER=akita ts-node ./src/blockGenerationTime.ts",
         "fmt": "eslint --ext .ts ./src --fix && prettier 'src/**/*.{ts, json}' --write",
         "lint": "eslint --ext .ts ./src && prettier 'src/**/*.{ts, json}' --list-different"
     },
     "dependencies": {
         "@types/bn.js": "^4.11.5",
-        "codechain-sdk": "^1.2.0",
-        "codechain-stakeholder-sdk": "^2.0.0",
+        "codechain-sdk": "^2.0.0",
+        "codechain-stakeholder-sdk": "https://github.com/HoOngEe/codechain-stakeholder-sdk-js#fix/validator-type",
         "request-promise-native": "^1.0.7",
         "rlp": "^2.2.3"
     },
